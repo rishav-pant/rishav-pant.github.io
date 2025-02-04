@@ -6,13 +6,13 @@
   }
   
   html {
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth;
   }
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #000000;
-    color: #f4f4f9;
+    background-color: #000000; /* Black background */
+    color: #f4f4f9; /* Light text */
     margin: 0;
     padding: 0;
   }
@@ -75,20 +75,27 @@
     background-color: #f1c40f;
   }
   
-  /* Work Experience Section */
-  #work-experience {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
+  /* Section Styles for consistency */
   .section-title {
     font-size: 2.5em;
     color: #f4d03f; /* Yellow */
     font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .section-content {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 20px;
+  }
+  
+  .section-content p {
+    color: #ddd;
     margin-bottom: 20px;
   }
   
-  .work-item {
+  .work-item, .about-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,18 +111,18 @@
     margin-right: 20px;
   }
   
-  .work-title {
+  .work-title, .certification-title, .about-title {
     font-size: 1.8em;
     font-weight: bold;
     color: #f4d03f; /* Yellow */
   }
   
-  .company-name {
+  .company-name, .about-description {
     font-size: 1.2em;
     font-weight: bold;
   }
   
-  .work-description {
+  .work-description, .about-text {
     font-size: 1.1em;
     color: #ddd;
     margin-top: 10px;
@@ -126,7 +133,7 @@
   
   /* Footer Section */
   footer {
-    background: #222;
+    background: white;
     color: white;
     padding: 20px;
     text-align: center;
@@ -171,11 +178,7 @@
       font-size: 1em;
     }
   
-    #work-experience {
-      padding: 30px 15px;
-    }
-  
-    .work-item {
+    .work-item, .about-item {
       flex-direction: column;
       text-align: center;
     }
@@ -185,15 +188,15 @@
       height: 60px;
     }
   
-    .work-title {
+    .work-title, .certification-title, .about-title {
       font-size: 1.5em;
     }
   
-    .company-name {
+    .company-name, .about-description {
       font-size: 1.1em;
     }
   
-    .work-description {
+    .work-description, .about-text {
       font-size: 1em;
     }
   }
