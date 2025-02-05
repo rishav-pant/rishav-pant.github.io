@@ -26,20 +26,7 @@
     top: 0;
     z-index: 100;
   }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .navbar a:hover {
-    color: #f4d03f; /* Yellow on hover */
-  }
+
   .navbar {
     padding: 10px 0;
     width: 100%;
@@ -68,7 +55,6 @@
       color: white;
       text-decoration: none;
       font-size: 20px;
-      /* font-weight: bold;  */
       padding: 8px;
       transition: background-color 0.5s ease;
   }
@@ -89,10 +75,10 @@
     align-items: center;
     display: flex;
     height: 70vh;
-    padding: 120px 0;
-    overflow: hidden;
+    padding: 100px 0;
+    z-index: 10;
   }
-  .hero h1 {
+  .hero-content h1 {
     font-size: 3.5em;
     margin-bottom: 10px;
     font-weight: bold;
@@ -102,6 +88,7 @@
   .hero p {
     font-size: 1.5em;
     margin-bottom: 30px;
+    opacity: 1;
   }
   /* Fade In Animation */
   @keyframes fadeIn {
@@ -118,9 +105,16 @@
   .hero-content {
     animation: fadeIn 1s ease-in-out;
     position: relative;
-    z-index: 10; /* Keep hero content on top of the overlay */
     color: yellow;
     text-align: center;
+
+    /* padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    background-color: #2f2e29; Yellow */
+
   }
   
   /* Create the lines for the skills to follow */
@@ -129,28 +123,65 @@
     top: 20%; /* Positioning the skill lines */
     left: 0;
     right: 0;
-    height: 60%; /* You can adjust based on how many lines you want */
+    height: 40%; /* You can adjust based on how many lines you want */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 5;
     overflow: hidden;
+    z-index: -1;
   }
 
   /* Styling for the skill words */
-  .skill-word {
+  .skill-word-0 {
     font-size: 36px;
     font-weight: bold;
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWord 10s linear infinite;
-    filter: blur(0px);
-    transition: filter 1s ease-in-out;
+    animation: moveWordLtoR 10s linear backwards;
   }
-  
+  .skill-word-1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    animation: moveWordRtoL 10s linear infinite;
+  }
+  .skill-word-2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    animation: moveWordLtoR 10s linear infinite;
+  }
+  .skill-word-3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    animation: moveWordRtoL 10s linear infinite;
+  }
+  .skill-word-4 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    animation: moveWordLtoR 10s linear infinite;
+  }
+  .skill-word-5 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    animation: moveWordRtoL 10s linear infinite;
+  }
   /* Animation for moving words horizontally */
-  @keyframes moveWord {
+  @keyframes moveWordLtoR {
     0% {
         transform: translateX(-100vw);
     }
@@ -158,28 +189,24 @@
         transform: translateX(100vw);
     }
   }
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 0, 0.3);
-    border-radius: 15px;
-    z-index: 7;
-    pointer-events: none;
-    filter: blur(5px);
+  /* Animation for moving words horizontally */
+  @keyframes moveWordRtoL {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
   }
   .cta {
     font-size: 1.2em;
-    background-color: #f4d03f; /* Yellow */
     color: black;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
     transition: background-color 0.3s ease;
+    background-color: #f4d03f; /* Yellow */
   }
   
   .cta:hover {
