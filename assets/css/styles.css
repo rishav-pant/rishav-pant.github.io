@@ -33,65 +33,21 @@
     margin: 0 20px;
     font-size: 18px;
     transition: color 0.3s ease;
-    align-items: center;
-    justify-content: center;
   }
   
   .navbar a:hover {
     color: #f4d03f; /* Yellow on hover */
   }
-  .navbar {
-    padding: 10px 0;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  /* Navbar List */
-  .navbar nav ul.nav-list {
-      display: flex;
-      justify-content: center;  /* Center the navbar items horizontally */
-      align-items: center;  /* Vertically align navbar items */
-      list-style: none;
-      margin: 0;
-      padding: 0;
-  }
-
-  /* Navbar Items Styling */
-  .navbar nav ul.nav-list li {
-      margin: 0 15px;  /* Spacing between buttons */
-  }
-
-  /* Navbar Links Styling */
-  .navbar nav ul.nav-list li a {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      /* font-weight: bold;  */
-      padding: 8px;
-      transition: background-color 0.5s ease;
-  }
-
-  /* Hover Effect for Links */
-  .navbar nav ul.nav-list li a:hover {
-      background-color: #6b6a66c0;  /* Yellow highlight on hover */
-      border-radius: 5px;
-  }
   
-  /* Hero Section */
-  .hero {
-    position: relative;
+/* Hero Section */
+.hero {
     background: #000;
     color: white;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 70vh;
     padding: 120px 0;
-    overflow: hidden;
+    position: relative;
   }
+  
   .hero h1 {
     font-size: 3.5em;
     margin-bottom: 10px;
@@ -103,78 +59,11 @@
     font-size: 1.5em;
     margin-bottom: 30px;
   }
-  /* Fade In Animation */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px); /* Starts slightly below */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); /* Ends at original position */
-    }
-  }
   
-  .hero-content {
-    animation: fadeIn 1s ease-in-out;
-    position: relative;
-    z-index: 10; /* Keep hero content on top of the overlay */
-    color: yellow;
-    text-align: center;
-  }
-  
-  /* Create the lines for the skills to follow */
-  .skill-container {
-    position: absolute;
-    top: 20%; /* Positioning the skill lines */
-    left: 0;
-    right: 0;
-    height: 60%; /* You can adjust based on how many lines you want */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 5;
-    overflow: hidden;
-  }
-
-  /* Styling for the skill words */
-  .skill-word {
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    opacity: 0.8;
-    position: absolute;
-    animation: moveWord 10s linear infinite;
-    filter: blur(0px);
-    transition: filter 1s ease-in-out;
-  }
-  
-  /* Animation for moving words horizontally */
-  @keyframes moveWord {
-    0% {
-        transform: translateX(-100vw);
-    }
-    100% {
-        transform: translateX(100vw);
-    }
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 0, 0.3);
-    border-radius: 15px;
-    z-index: 7;
-    pointer-events: none;
-    filter: blur(5px);
-  }
   .cta {
     font-size: 1.2em;
     background-color: #f4d03f; /* Yellow */
-    color: black;
+    color: white;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -184,15 +73,12 @@
   
   .cta:hover {
     background-color: rgb(28, 73, 219);
-    color: white;
   }
-
+  
   
   /* Section Styles for consistency */
   .section-title {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    padding-top: 10px;
+    font-size: 2.5em;
     color: #f4d03f; /* Yellow */
     font-weight: bold;
     text-align: center;
@@ -253,7 +139,6 @@
     color: white;
     padding: 20px;
     text-align: center;
-    position: sticky;
   }
   
   .footer-icons {
