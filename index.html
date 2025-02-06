@@ -38,9 +38,53 @@
       <p>Reading about best practices in container orchestration systems like kubernetes is my hobby</p>
       <a href="mailto:patiencepant@gmail.com" class="cta">Contact Me</a>
     </div>
-    <div class="skill-container"></div>
     <!-- Skill words will be generated dynamically inside here -->
-    <script src="scripts.js"></script>
+    <div class="skill-container"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const skills = ['Bash', 'C', 'Go', 'Java', 'JavaScript', 'Programming Languages', 'Python', 'Redux', 'TypeScript', 'Customer Satisfaction', 'Email', 'Forensics', 'Leadership', 'Management', 'Mentoring', 'Onboarding', 'Presence', 'Problem Solving', 'Reporting', 'Workday', 'Amazon EC2', 'Amazon Web Services', 'Analytical', 'Ansible', 'Apps', 'Automation', 'Bash Shell', 'Cloud', 'Cyber Security', 'Debugging', 'Deployment', 'DevOps', 'Django', 'Docker', 'Firebase', 'Git', 'GitHub', 'Google Cloud', 'Google Cloud Platform', 'Hibernate', 'Internet', 'JScript', 'Kubernetes', 'Linux', 'Monitoring', 'MySQL', 'Networking', 'Node.js', 'OpenCV', 'OpenStack', 'Packet Tracer', 'Performance', 'Research', 'Shell Scripting', 'Simulation', 'Site Reliability Engineering', 'Social', 'Software Development', 'Troubleshooting', 'Unix'];
+      const skillContainer = document.querySelector('.skill-container');
+
+      // Create a set to track occupied lines
+      const occupiedLines = new Set();
+
+      // Total number of lines to place the words (you can adjust as needed)
+      const totalLines = 4;
+
+      // Function to generate a new skill word
+      function createJugglingSkill() {
+          // Create a new skill word element
+          const skill = document.createElement('div');
+          skill.classList.add('skill-word');
+          skill.textContent = skills[Math.floor(Math.random() * skills.length)];
+
+          let line;
+          // Ensure the word is placed on a line that is not occupied
+          do {
+              line = Math.floor(Math.random() * totalLines);
+          } while (occupiedLines.has(line));  // Ensure no overlapping on the same line
+
+          // Mark the line as occupied
+          occupiedLines.add(line);
+
+          // Position the word on the selected line (25% spacing per line)
+          skill.style.top = `${line * 25}%`;
+
+          // Append the word to the skill-container
+          skillContainer.appendChild(skill);
+
+          // After the animation finishes (10s), remove the word and free the line
+          setTimeout(() => {
+              occupiedLines.delete(line);
+              skill.remove();
+          }, 10000); // 10s is the duration of the word animation
+      }
+
+      // Generate a new word every 600ms
+      setInterval(createJugglingSkill, 600);
+  });
+
+    </script>
   </section>
   <!-- Work Experience Section -->
   <section id="work-experience">
