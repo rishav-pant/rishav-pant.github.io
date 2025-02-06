@@ -11,7 +11,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #333; /* Black background */
+    background-color: #000000; /* Black background */
     color: #f4f4f9; /* Light text */
     margin: 0;
     padding: 0;
@@ -68,7 +68,7 @@
   /* Hero Section */
   .hero {
     position: relative;
-    background: #333;
+    background: #000;
     color: white;
     text-align: center;
     justify-content: center;
@@ -85,7 +85,7 @@
     color: #f4d03f; /* Yellow */
   }
   
-  .hero-content p {
+  .hero p {
     font-size: 1.5em;
     margin-bottom: 30px;
     opacity: 1;
@@ -107,24 +107,15 @@
     position: relative;
     color: yellow;
     text-align: center;
-    width: 100%;
-  }
-  .responsive-rectangle {
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    margin-top: 300px;
-    min-height: 100px;
-    background-color: rgba(0, 0, 0, 0.6); /* Black-greyish with some transparency */
-    border:  rgba(255, 255, 255, 0.2); /* Light border */
-    margin: 20px auto; /* Center the rectangle */
-    padding: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-  }
 
+    /* padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    background-color: #2f2e29; Yellow */
+
+  }
   
   /* Create the lines for the skills to follow */
   .skill-container {
@@ -132,13 +123,12 @@
     top: 20%; /* Positioning the skill lines */
     left: 0;
     right: 0;
-    height: 70%; /* You can adjust based on how many lines you want */
+    height: 40%; /* You can adjust based on how many lines you want */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    z-index: -2;
-    /* border: 10px solid; */
+    z-index: -1;
   }
 
   /* Styling for the skill words */
@@ -148,7 +138,7 @@
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWordLtoR 3s linear infinite;
+    animation: moveWordLtoR 10s linear backwards;
   }
   .skill-word-1 {
     font-size: 36px;
@@ -156,7 +146,7 @@
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWordRtoL 3s linear infinite;
+    animation: moveWordRtoL 10s linear infinite;
   }
   .skill-word-2 {
     font-size: 36px;
@@ -164,7 +154,7 @@
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWordLtoR 3s linear infinite;
+    animation: moveWordLtoR 10s linear infinite;
   }
   .skill-word-3 {
     font-size: 36px;
@@ -172,7 +162,7 @@
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWordRtoL 3s linear infinite;
+    animation: moveWordRtoL 10s linear infinite;
   }
   .skill-word-4 {
     font-size: 36px;
@@ -180,7 +170,7 @@
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWordLtoR 3s linear infinite;
+    animation: moveWordLtoR 10s linear infinite;
   }
   .skill-word-5 {
     font-size: 36px;
@@ -188,12 +178,12 @@
     color: white;
     opacity: 0.8;
     position: absolute;
-    animation: moveWordRtoL 3s linear infinite;
+    animation: moveWordRtoL 10s linear infinite;
   }
   /* Animation for moving words horizontally */
   @keyframes moveWordLtoR {
     0% {
-        transform: translateX(-20vw);
+        transform: translateX(-100vw);
     }
     100% {
         transform: translateX(100vw);
@@ -205,7 +195,7 @@
         transform: translateX(100vw);
     }
     100% {
-        transform: translateX(-20vw);
+        transform: translateX(-100vw);
     }
   }
   .cta {
@@ -239,7 +229,7 @@
   .section-content {
     text-align: center;
     font-size: 1.2em;
-    margin: 0 60px;
+    margin: 0 20px;
   }
   
   .section-content p {
@@ -253,9 +243,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-    background-color: #121212;
+    background-color: #333;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 8px;
   }
   
   .work-icon img{
